@@ -1,0 +1,6 @@
+from .fastloader import FastTensorDataLoader
+from .deepcat import get_dataloader_both
+from .fastloader_onehotEncode import FastTensorDataLoader_onehotEncode
+from .fastloader_onehotEncode_onebatch import FastTensorDataLoader_onehotEncode_onebatch
+from .both import DataLoader_both
+from .deepcat_both import get_dataloader_both
