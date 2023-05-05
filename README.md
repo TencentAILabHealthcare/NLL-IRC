@@ -17,7 +17,7 @@ on Artificial Intelligence (IJCAI), 2023
 We use two datasets in our paper for demonstration: 1) [CMV dataset](https://clients.adaptivebiotech.com/pub/emerson-2017-natgen) and 2) [Cancer dataset](https://github.com/s175573/DeepCAT/tree/master/TrainingData).
 
 ## Data preprocessing 
-We provide the extracted embedding for the CMV data set [CMV dataset](data/cmv/), which can be directly used for the training of our model.
+We provide the extracted embedding for the CMV data set in [here](data/cmv/), which can be directly used for the training of our model.
 To generate the embedding Cancer dataset, after downloading the [Cancer dataset](https://github.com/s175573/DeepCAT/tree/master/TrainingData) and put it in the data/deepcat/ folder, run:
 
     python3 preprocess.py
