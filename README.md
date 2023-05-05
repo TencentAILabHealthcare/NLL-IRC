@@ -7,11 +7,12 @@ on Artificial Intelligence (IJCAI), 2023
 
 ![Pipeline](pic/overall.png "pipeline")
 
-# Requirement
+# Requirement 
 
     python==3.6.8
     scikit-learn==0.23.2
     torch==1.7.0+cu101
+	transformers==4.28.1
 
 # Data Preparation
 We use two datasets in our paper for demonstration: 1) [CMV dataset](https://clients.adaptivebiotech.com/pub/emerson-2017-natgen) and 2) [Cancer dataset](https://github.com/s175573/DeepCAT/tree/master/TrainingData).
@@ -24,18 +25,18 @@ To generate the embedding Cancer dataset, after downloading the [Cancer dataset]
 
 
 # Training:
-With downloaded and processed datasets, you can reproduce the results in our paper by run:
+With downloaded and processed datasets, you can train the model by run:
 
     python3 train_CMV.py/train_Cancer.py
             --dataset_dir               # data directory
 
-            # training schema parameters
+            # training schema hyper-parameters
             --batch_size *              # batch size
             --lr *                      # learning rate
             --epoch *                   # number of training epochs
             --warm_epoch *              # number of epochs for warm model up
 
-            # model architecture parameters
+            # model architecture hyper-parameters
             --n_layers *                
             --n_heads *                 
             --d_token *               
@@ -43,9 +44,16 @@ With downloaded and processed datasets, you can reproduce the results in our pap
             --ffn_dropout * 
             --residual_dropout *   
 
-            # method-related parameters
+            # method-related hyper-parameters
             --ema *                     # the EMA coefficient in our method 
             --label_smoothing *         # the label smoothing coefficient in our method
+
+The default hyper-parameters are the same those reported in with our paper, so run
+
+    python3 train_CMV.py/train_Cancer.py
+            --dataset_dir               # data directory
+
+should reproduce the results in our paper.
 
 # Disclaimer
 
