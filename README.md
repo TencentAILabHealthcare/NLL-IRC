@@ -47,12 +47,16 @@ With downloaded and processed datasets, you can train the model by run:
             --ema *                     # the EMA coefficient in our method 
             --label_smoothing *         # the label smoothing coefficient in our method
 
-The default hyper-parameters are the same those reported in with our paper, so run
+## Runing examples
 
-    python3 train_CMV.py/train_Cancer.py
-            --dataset_dir               # data directory
+(1) For CMV dataset:
 
-should reproduce the results in our paper.
+    python3 train_CMV.py --dataset_dir dataset/CMV/ --batch_size 256 --lr 0.005 --epoch 100                   --warm_epoch 15 --n_layers  1 --n_heads 1 --d_token 1 --attention_dropout 0 --ffn_dropout 0 --residual_dropout 0 --ema 0.99 --label_smoothing 0.7
+
+(2) For Cancer dataset:
+
+    python3 train_Cancer.py --dataset_dir dataset/CMV/ --batch_size 256 --lr 0.0005 --epoch 200                   --warm_epoch 8 --n_layers  1 --n_heads 4 --d_token 192 --attention_dropout 0.1 --ffn_dropout 0.1 --residual_dropout 0.1 --ema 0.95 --label_smoothing 0.4
+
 
 # Disclaimer
 
