@@ -1,9 +1,8 @@
 # NoisyLabelLearning4Repertoire
 This repository holds the Pytorch implementation for the method described in the paper:
 > A Noisy-Label-Learning Formulation for Immune Repertoire Classification and Disease-Associated Immune Receptor Sequence Identification.
-Mingcai Chen, Yu Zhao, Bing He, Zhonghuang Wang, and Jianhua Yao
-The 32nd International Joint Conference
-on Artificial Intelligence (IJCAI), 2023
+Mingcai Chen, Yu Zhao, Bing He, Zhonghuang Wang, and Jianhua Yao.
+The 32nd International Joint Conference on Artificial Intelligence (IJCAI 23) 
 
 ![Pipeline](pic/overall.png "pipeline")
 
